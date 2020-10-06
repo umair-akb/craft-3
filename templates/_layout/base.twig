@@ -38,28 +38,14 @@
 
       </head>
 
-      <body 
-         x-data="app()"
-         x-init="viewportHeight()"
-         x-on:resize.window="viewportHeight()"
-      >
+      <body>
 
-         {% block body %}{% endblock %}
+         <div id="app">
+            {% block body %}{% endblock %}
+         </div>
          
          {# Javascript #}
          <script src="{{ siteUrl }}dist/{{ rev('js/app.js') }}" defer></script>
-
-         {% js %}
-            function app() {
-               return {
-                  viewportHeight: null,
-                  viewportHeight() {
-                     viewportHeight = window.innerHeight * 0.01; 
-                     document.documentElement.style.setProperty('--vh', `${viewportHeight}px`);
-                  }
-               }
-            }
-         {% endjs %}
 
       </body>
 
