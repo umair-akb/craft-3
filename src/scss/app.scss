@@ -1,8 +1,12 @@
-@tailwind base;
-@tailwind components;
+// @tailwind base;
+// @tailwind components;
 
-@import 'utilities/*';
-@import 'components/*';
-@import 'base';
+// // @import 'utilities/*';
+// // @import 'components/*';
+// // @import 'base';
 
-@tailwind utilities;
+// @tailwind utilities;
+
+.test {
+    color: red;
+}

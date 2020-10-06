@@ -33,7 +33,8 @@
     "mmikkel/retcon": "2.2.1",
     "putyourlightson/craft-blitz": "3.6.10",
     "spacecatninja/imager-x": "v3.2.2",
-    "sebastianlenz/linkfield": "1.0.23"
+    "sebastianlenz/linkfield": "1.0.23",
+    "nystudio107/craft-twigpack": "1.2.6"
   },
   "autoload": {
     "psr-4": {

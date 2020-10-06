@@ -19,19 +19,7 @@
          {% endfor %}
 
          {# CSS #}
-         {% set cssUrl = siteUrl ~ 'dist/' ~ rev('css/app.css')  %}
-
-         {% if block('criticalCss')|length and craft.app.config.env == 'production' %}
-            <style>
-               {% block criticalCss %}{% endblock %}
-            </style>
-            <link rel="preload" href="{{ cssUrl }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-            <noscript>
-               <link rel="stylesheet" href="{{ cssUrl }}">
-            </noscript>
-         {% else %}
-            <link rel="stylesheet" href="{{ cssUrl }}">
-         {% endif %}
+         {{ craft.twigpack.includeCssModule("style.css", true) }}
 
          {# Favicons #}
          {{ source('_components/favicons', ignore_missing = true) }}
@@ -41,11 +29,13 @@
       <body>
 
          <div id="app">
+            <HelloWorld></HelloWorld>
+            Test
             {% block body %}{% endblock %}
          </div>
          
          {# Javascript #}
-         <script src="{{ siteUrl }}dist/{{ rev('js/app.js') }}" defer></script>
+         {{ craft.twigpack.includeJsModule("main.js", true) }}
 
       </body>
 
