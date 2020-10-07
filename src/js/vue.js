@@ -2,6 +2,8 @@ import Vue from "vue";
 
 Vue.config.productionTip = false;
 
+// import HelloWorld from '../components/HelloWorld.vue'
+
 const requireComponent = require.context(
     "../components",
     true,
@@ -26,5 +28,8 @@ requireComponent.keys().forEach(fileName => {
 
 new Vue({
   el: "#app",
-  delimiters: ["${", "}"]
+  delimiters: ["${", "}"],
+  // components: {
+  //   HelloWorld
+  // },
 });

@@ -18,13 +18,13 @@
             ],
             // Public server config
             'server' => [
-                'manifestPath' => '/dist/',
+                'manifestPath' => '@webroot/dist/',
                 'publicPath' => '/',
             ],
             // webpack-dev-server config
             'devServer' => [
-                'manifestPath' => 'http://localhost:8080/',
-                'publicPath' => 'http://localhost:8080/',
+                'manifestPath' => '@web/dist/',
+                'publicPath' => '@web/dist/',
             ],
             // Bundle to use with the webpack-dev-server
             'devServerBuildType' => 'modern',
